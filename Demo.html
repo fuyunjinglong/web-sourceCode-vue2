@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #demo {
+        font-family: "Helvetica", Arial, sans-serif;
+        text-align: center;
+      }
+    </style>
+    <script src="./dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="demo">
+      <button @click="num++">Object类型自增加：{{num}}</button>
+      <button @click="add">Array类型自增加：{{arr}}</button>
+    </div>
+    <script>
+      new Vue({
+        el: "#demo",
+        data: {
+          num: 0,
+          arr: [1, 2, 3],
+        },
+        methods: {
+          add() {
+            this.arr.push(this.arr[this.arr.length - 1] + 1);
+            // this.$set(this.arr, 0, this.arr[0] + 1);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
