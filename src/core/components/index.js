@@ -1,6 +1,6 @@
-import KeepAlive from './keep-alive'
+import KeepAlive from "./keep-alive";
 
-// luwen定义了全局内置组件KeepAlive
+console.log("src/core/components/index.js-luwen定义了全局内置组件KeepAlive");
 export default {
-  KeepAlive
-}
+  KeepAlive,
+};
